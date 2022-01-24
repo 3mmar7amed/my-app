@@ -30,7 +30,7 @@ const ProductsList = ({ Products }) => {
       for (const [key, value] of Products_IDs.entries()) {
         IDsArray.push(value) ; 
       }
-      const res = await fetch(`https://juniortest-amar-hamed.herokuapp.com/Delete`, {
+      const res = await fetch(`https://juniortest-ammar-hamed.herokuapp.com/Delete`, {
       method: 'DELETE',
       headers: {
         'Content-type': 'application/json',
