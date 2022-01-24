@@ -38,8 +38,6 @@ const SetProduct = ()=>{
           SKU && Name && Price && Type && !PriceError && dimension ? PostProduct({SKU , Name , Price , Type , dimension}) 
           : WariningMessage("Please, submit required data")
         }
-        
-
     }
 
 
@@ -91,8 +89,8 @@ const SetProduct = ()=>{
 
 
 
-      const WariningMessage = ({text}) => {
-        console.log(text)
+      const WariningMessage = (text) => {
+        console.log({text})
         store.addNotification({
             title: "Warning!",
             message: {text},
