@@ -41,7 +41,7 @@ const SetProduct = ()=>{
 
     const PostProduct = async (product)=> {
         console.log(product)
-        const res = await fetch('https://juniortest-ammar-hamed.herokuapp.com/addProduct', {
+        const res = await fetch('https://juniortest-ammar-hamed.herokuapp.com/create', {
             method: 'POST',
             headers: {
               'Content-type': 'application/json',
