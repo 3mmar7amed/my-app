@@ -87,7 +87,7 @@ const SetProduct = ()=>{
       const WariningMessage = () => {
         store.addNotification({
             title: "Warning!",
-            message: "please fill  the required data ",
+            message: "Please, submit required data",
             type: "warning",
             insert: "top",
             container: "top-right",
@@ -121,7 +121,7 @@ const SetProduct = ()=>{
                 <div className="btn">
           <Stack direction="row" spacing={2}>
                 <Button1 text = "Save" />
-                <Button1 text = " Cansel" link = "https://juniortest-amar-hamed.herokuapp.com/" />
+                <Button1 text = "Cancel" link = "https://juniortest-amar-hamed.herokuapp.com/" />
           </Stack>
                 
                 </div>

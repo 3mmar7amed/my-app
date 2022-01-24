@@ -2,12 +2,28 @@
 import { makeStyles } from '@material-ui/core'
 import {useState , useEffect} from 'react'
 import TextField from '@material-ui/core/TextField'
+import 'react-notifications-component/dist/theme.css'
+import { store } from 'react-notifications-component';
+
 
 const Label = ({label , PassToParent , state ,labelValue })=> {
     
-
-
     const HandleInput = (value)=> {
+
+      store.addNotification({
+        title: "Warning!",
+        message: "Please, provide the data of indicated type",
+        type: "warning",
+        insert: "top",
+        container: "top-right",
+        animationIn: ["animate__animated", "animate__fadeIn"],
+        animationOut: ["animate__animated", "animate__fadeOut"],
+        dismiss: {
+          duration: 5000,
+          onScreen: true,
+          showIcon:true ,
+        }
+      });
 
         let val = parseFloat(value)
 

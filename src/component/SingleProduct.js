@@ -23,7 +23,7 @@ const SingleProduct = ({SingleProduct , id})=>{
 
         <Grid item xm={12} md={6} lg={4} >
             
-            <Card style={{ border: "black 2px solid"}} className="out-card" sx={{ border: 50 }}  >
+        <Card style={{ border: "black 2px solid"}} className="out-card" sx={{ border: 50 }}  >
             <div className = "delete-checkbox" id ="delete-checkbox">
                 <Checkbox {...label} 
                     checked= {checked}
@@ -31,7 +31,7 @@ const SingleProduct = ({SingleProduct , id})=>{
                 />
             </div>
             
-                <div className='card'>
+        <div className='card'>
            <Typography variant="h5" component="div">
             {SingleProduct.SKU}  
            </Typography>
@@ -44,9 +44,8 @@ const SingleProduct = ({SingleProduct , id})=>{
            <Typography variant="h5" component="div">
            {SingleProduct.price} 
            </Typography>
-            
-            
-            </div>
+             
+        </div>
             </Card>
             
         </Grid>
