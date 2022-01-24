@@ -66,8 +66,7 @@ const LabelForFur = ({PassToParent})=> {
 
   return ([
     <>
-            <div id = "#height">
-                <TextField className={classes.field}
+            <TextField className={classes.field}
                 inputProps={{ inputMode: 'numeric'  , pattern: '[0-9]*'  }}
                 onChange={(e) => {  setHieght(e.target.value) ; HandleInput (e.target.value)}}
                 label= "Height"
@@ -80,11 +79,6 @@ const LabelForFur = ({PassToParent})=> {
                 error= {HieghtError}
                 key= {0}
                 helperText={textError}            />
-
-            </div>
-
-
-            <div id = "#width">
 
             <TextField className={classes.field}
             inputProps={{ inputMode: 'numeric' , pattern: '[0-9]*'  }}
@@ -100,13 +94,9 @@ const LabelForFur = ({PassToParent})=> {
             key= {1}
             helperText={textError}
                         />
-
-
-            </div>
  
 
-            <div id = "#length">
-
+            
             <TextField className={classes.field}
             inputProps={{ inputMode: 'numeric' , pattern: '[0-9]*' }}
             onChange={(e) => {setLenght(e.target.value) ;   HandleInput (e.target.value)}}
@@ -121,10 +111,6 @@ const LabelForFur = ({PassToParent})=> {
             key= {2}
             helperText={textError}           
                 />
-
-#product_form
-
-            </div>
             
             {handleValues()}
     </>
