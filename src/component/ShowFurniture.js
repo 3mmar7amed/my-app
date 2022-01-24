@@ -36,9 +36,9 @@ const ShowFurniture = ({FurnitureData})=> {
     return (
 
         <>
-        <div id = "#height"><Label label = "Heihgt" PassToParent = {HandleHeihgt} /></div>
-        <div id = "#width"><Label label = "Width" PassToParent = {HandleWidth} /></div>
-        <div id = "#length"><Label label = "Lenght" PassToParent = {HandleLength} /></div>
+        <div id = "height"><Label label = "Heihgt" PassToParent = {HandleHeihgt} /></div>
+        <div id = "width"><Label label = "Width" PassToParent = {HandleWidth} /></div>
+        <div id = "length"><Label label = "Lenght" PassToParent = {HandleLength} /></div>
         
         </>
     )

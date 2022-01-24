@@ -130,7 +130,7 @@ const SetProduct = ()=>{
 
             </Typography>
 
-                <div id = "#sku">
+                <div id = "sku">
                     
                         <TextField className={classes.field}
                         onChange={(e) => setSKU(e.target.value)}
@@ -145,7 +145,7 @@ const SetProduct = ()=>{
                 </div>
                
 
-                <div id = "#name">
+                <div id = "name">
                         <TextField className={classes.field}
                         onChange={(e) => setName(e.target.value)}
                         label="Name"
@@ -161,12 +161,12 @@ const SetProduct = ()=>{
                 </div>
                 
 
-                <div id = "#price">
+                <div id = "price">
                         <Label label = "Price" state = {PriceError}  PassToParent = {setPrice} />
                 </div>
                 
                 
-                <div id = "#productType">
+                <div id = "productType">
                         <FormControl sx={{ m: 1, minWidth: 80 }} required   className={classes.field}>
                             <InputLabel id="demo-simple-select-autowidth-label">Type</InputLabel>
                             <Select

@@ -8,7 +8,7 @@ const ShowBook = ({BookData})=> {
         BookData(EnteredData + "KG")
     }
     return (
-        <div id = "#weight">
+        <div id = "weight">
         <Label   PassToParent = {havingDATA}  label = "Weight(KG)"/>
         </div>
     )

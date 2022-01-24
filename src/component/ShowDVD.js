@@ -10,7 +10,7 @@ const ShowDVD = ({DVDdata})=> {
     }
 
     return (
-        <div id = "#size">
+        <div id = "size">
             <Label PassToParent = {havingDATA}  label = "Size(MB)" />
         </div>
         
