@@ -85,14 +85,10 @@ const SetProduct = ()=>{
     const [PriceIsNumber, setPriceIsNumber] = useState(true)
 
 
-
-
-
-
       const WariningMessage = (text) => {
 
         let txt = String(text)
-        console.log(text)
+        console.log(typeof txt)
         store.addNotification({
             title: "Warning!",
             message: {txt},
