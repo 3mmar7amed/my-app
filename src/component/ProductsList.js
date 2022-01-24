@@ -38,7 +38,7 @@ const ProductsList = ({ Products }) => {
       body: JSON.stringify({IDsArray}),
     })
 
-    //window.location.reload();
+    window.location.reload();
     }
     else console.log("size is == 0 && nothing to delete ")
   }
