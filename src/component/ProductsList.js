@@ -80,10 +80,7 @@ const ProductsList = ({ Products }) => {
                
             </Grid>
         </Container>
-        <footer>
-        <h2 className="center"> Scandiweb Test assignment  </h2>
 
-  </footer>
     </div>
   )
 }
