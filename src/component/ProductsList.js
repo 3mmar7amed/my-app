@@ -80,9 +80,10 @@ const ProductsList = ({ Products }) => {
                
             </Grid>
         </Container>
-        <div id = "footer"> 
-                  <h2 className="center"> Scandiweb Test assignment  </h2>
-        </div>
+        <footer>
+        <h2 className="center"> Scandiweb Test assignment  </h2>
+
+  </footer>
     </div>
   )
 }
