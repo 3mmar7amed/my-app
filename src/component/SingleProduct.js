@@ -24,7 +24,7 @@ const SingleProduct = ({SingleProduct , id})=>{
         <Grid item xm={12} md={6} lg={4} >
             
             <Card style={{ border: "black 2px solid"}} className="out-card" sx={{ border: 50 }}  >
-            <div className = ".delete-checkbox" id =   ".delete-checkbox">
+            <div className = "delete-checkbox" id =   "delete-checkbox">
                 <Checkbox {...label} 
                     checked= {checked}
                     onChange={(e) => handleChange(e , SingleProduct.id)}
