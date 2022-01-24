@@ -107,8 +107,8 @@ const SetProduct = ()=>{
 
     return (
         <Container>
-
-        <form id = "#product_form" noValidate autoComplete="off" onSubmit= {handlesubmit}>
+         <div id = "#product_form">
+            <form noValidate autoComplete="off" onSubmit= {handlesubmit}>
         
         <Typography 
             variant = "h6"
@@ -191,6 +191,9 @@ const SetProduct = ()=>{
                 </div>
 
             </form>
+
+            </div>
+        
             
         </Container>
         
