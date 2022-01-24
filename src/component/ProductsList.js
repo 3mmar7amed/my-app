@@ -32,17 +32,15 @@ const ProductsList = ({ Products }) => {
       }
       const res = await fetch(`https://juniortest-amar-hamed.herokuapp.com/Delete`, {
       method: 'DELETE',
-
       headers: {
         'Content-type': 'application/json',
       },
       body: JSON.stringify({IDsArray}),
     })
 
-    window.location.reload();
+    //window.location.reload();
     }
     else console.log("size is == 0 && nothing to delete ")
-
   }
 
   return (
