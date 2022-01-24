@@ -10,6 +10,14 @@ const Label = ({label , PassToParent , state ,labelValue })=> {
     
     const HandleInput = (value)=> {
 
+
+        let val = parseFloat(value)
+
+        if(isNaN(val)){
+            setvalueError(true)
+            settextError("incrorrect input , please input only numbers !")
+
+            
       store.addNotification({
         title: "Warning!",
         message: "Please, provide the data of indicated type",
@@ -25,11 +33,7 @@ const Label = ({label , PassToParent , state ,labelValue })=> {
         }
       });
 
-        let val = parseFloat(value)
-
-        if(isNaN(val)){
-            setvalueError(true)
-            settextError("incrorrect input , please input only numbers !")
+      
         }
             
         else {
