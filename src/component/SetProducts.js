@@ -90,10 +90,12 @@ const SetProduct = ()=>{
 
 
       const WariningMessage = (text) => {
-        console.log({text})
+
+        let txt = String(text)
+        console.log(text)
         store.addNotification({
             title: "Warning!",
-            message: {text},
+            message: {txt},
             type: "warning",
             insert: "top",
             container: "top-right",
