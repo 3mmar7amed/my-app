@@ -24,10 +24,13 @@ const SingleProduct = ({SingleProduct , id})=>{
         <Grid item xm={12} md={6} lg={4} >
             
             <Card style={{ border: "black 2px solid"}} className="out-card" sx={{ border: 50 }}  >
-            <Checkbox {...label} 
-                checked= {checked}
-                onChange={(e) => handleChange(e , SingleProduct.id)}
-             />
+            <div className = ".delete-checkbox" id =   ".delete-checkbox">
+                <Checkbox {...label} 
+                    checked= {checked}
+                    onChange={(e) => handleChange(e , SingleProduct.id)}
+                />
+            </div>
+            
                 <div className='card'>
            <Typography variant="h5" component="div">
             {SingleProduct.SKU}  
