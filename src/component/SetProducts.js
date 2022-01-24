@@ -43,7 +43,7 @@ const SetProduct = ()=>{
         console.log(product)
         const res = await fetch('https://juniortest-ammar-hamed.herokuapp.com/create', {
             method: 'POST',
-            mode:'cors' , 
+            mode:'no-cors' , 
             headers: {
               'Content-type': 'application/json',
             },
