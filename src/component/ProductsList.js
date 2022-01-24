@@ -61,7 +61,7 @@ const ProductsList = ({ Products }) => {
                 <div className="btn">
 
                   <Stack direction="row" spacing={2}>
-                        <Button1 variant="outlined"  text = "Add" link = "http://localhost:3000/addproduct"></Button1>
+                        <Button1 variant="outlined"  text = "Add" link = "https://juniortest-amar-hamed.herokuapp.com/addproduct"></Button1>
                         <Button1 variant="outlined" disabled text = "Mass Delete " onClick={DeleteProducts} >
                           
                         </Button1>

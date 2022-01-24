@@ -120,7 +120,7 @@ const SetProduct = ()=>{
                 <div className="btn">
           <Stack direction="row" spacing={2}>
                 <Button1 text = "Save" />
-                <Button1 text = " Cansel" link = "http://localhost:3000" />
+                <Button1 text = " Cansel" link = "https://juniortest-amar-hamed.herokuapp.com/" />
       
           </Stack>
                 
