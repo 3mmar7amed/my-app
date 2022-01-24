@@ -6,7 +6,7 @@ import 'react-notifications-component/dist/theme.css'
 import { store } from 'react-notifications-component';
 
 
-const Label = ({label , PassToParent , state ,labelValue })=> {
+const Label = ({label , PassToParent , state , ISNumber })=> {
     
     const HandleInput = (value)=> {
 
@@ -33,14 +33,19 @@ const Label = ({label , PassToParent , state ,labelValue })=> {
         }
       });
 
-      
+
         }
             
         else {
             setvalueError(false)
             settextError("that's a correct input")
             PassToParent(val)
-        } 
+        }
+
+        ISNumber(!valueError)
+
+        
+        
     }
 
    

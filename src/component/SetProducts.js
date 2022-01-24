@@ -32,9 +32,13 @@ const SetProduct = ()=>{
         Name === '' ? setNameError(true) : setNameError(false)
         Price === '' ? setPriceError(true) : setPriceError(false) 
         Type === "" ||dimension === "" ?  setTypeError(true) : setTypeError(false)
-
-        SKU && Name && Price && Type && !PriceError && dimension ? PostProduct({SKU , Name , Price , Type , dimension}) 
-        : WariningMessage()
+        if(!PriceIsNumber)
+        WariningMessage("Please, provide the data of indicated type")
+        else {
+          SKU && Name && Price && Type && !PriceError && dimension ? PostProduct({SKU , Name , Price , Type , dimension}) 
+          : WariningMessage("Please, submit required data")
+        }
+        
 
     }
 
@@ -80,14 +84,18 @@ const SetProduct = ()=>{
     const [PriceError, setPriceError] = useState(false)
     const [typeError, setTypeError] = useState(false)
 
+    const [PriceIsNumber, setPriceIsNumber] = useState(true)
 
 
 
 
-      const WariningMessage = () => {
+
+
+      const WariningMessage = ({text}) => {
+        console.log(text)
         store.addNotification({
             title: "Warning!",
-            message: "Please, submit required data",
+            message: {text},
             type: "warning",
             insert: "top",
             container: "top-right",
@@ -162,7 +170,7 @@ const SetProduct = ()=>{
                 
 
                 <div id = "price">
-                        <Label label = "Price" state = {PriceError}  PassToParent = {setPrice} />
+                        <Label label = "Price" state = {PriceError}  PassToParent = {setPrice} ISNumber = {setPriceIsNumber} />
                 </div>
                 
                 
