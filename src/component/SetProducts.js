@@ -41,7 +41,7 @@ const SetProduct = ()=>{
 
     const PostProduct = async (product)=> {
         console.log(product)
-        const res = await fetch('http://localhost:8000/addproduct', {
+        const res = await fetch('https://juniortest-amar-hamed.herokuapp.com/addproduct', {
             method: 'POST',
             headers: {
               'Content-type': 'application/json',
