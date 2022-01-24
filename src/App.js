@@ -30,7 +30,7 @@ const theme = createTheme({
 })
 
     useEffect(() => {
-      fetch('https://juniortest-ammar-hamed.herokuapp.com/')
+      fetch('https://juniortest-ammar-hamed.herokuapp.com/products')
         .then(res => res.json())
         .then(data => setProducts(data))
     }, [])
