@@ -1,11 +1,8 @@
 
 import Label from "./Label";
-import LabelForFur from './LabelForFur'
-import { makeStyles } from '@material-ui/core'
-import {Component, useState , useEffect} from 'react'
-import TextField from '@material-ui/core/TextField'
-import { ToastProvider, useToasts } from 'react-toast-notifications';
-import WarnignMessage from './WarnignMessage'
+
+import {useState} from 'react'
+
 
 const ShowFurniture = ({FurnitureData})=> {
 
@@ -39,9 +36,10 @@ const ShowFurniture = ({FurnitureData})=> {
     return (
 
         <>
-        <Label label = "Heihgt" PassToParent = {HandleHeihgt} />
-        <Label label = "Width" PassToParent = {HandleWidth} />
-        <Label label = "Lenght" PassToParent = {HandleLength} />
+        <div id = "#height"><Label label = "Heihgt" PassToParent = {HandleHeihgt} /></div>
+        <div id = "#width"><Label label = "Width" PassToParent = {HandleWidth} /></div>
+        <div id = "#length"><Label label = "Lenght" PassToParent = {HandleLength} /></div>
+        
         </>
     )
 

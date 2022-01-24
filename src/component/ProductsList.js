@@ -1,6 +1,8 @@
 import SingleProduct from "./SingleProduct"
 import Grid from '@material-ui/core/Grid'
-import { Button , Container, Typography } from "@material-ui/core";
+import {  Container, Typography } from "@material-ui/core";
+import Stack from '@mui/material/Stack';
+
 import '../App.css';
 import Button1 from './Button1'
 
@@ -55,22 +57,34 @@ const ProductsList = ({ Products }) => {
             gutterBottom
             
             >
-                <div className="header"> Product List
+                <div className="header"> <h2>Product List</h2>
                 <div className="btn">
-                  <Button1 text = "Add" link = "http://localhost:3000/create"/>
-                  <Button1 text = "Mass Delete " onClick={DeleteProducts}/>
+
+                  <Stack direction="row" spacing={2}>
+                        <Button1 variant="outlined"  text = "Add" link = "http://localhost:3000/addproduct"></Button1>
+                        <Button1 variant="outlined" disabled text = "Mass Delete " onClick={DeleteProducts} >
+                          
+                        </Button1>
+                  
+                </Stack>
+              
                 </div>
                 </div>
+                <hr className="line"  ></hr>
+
 
             </Typography>
             <Grid container spacing={3}> 
             {Products.map((product) => (
-            <SingleProduct key = {product.id} SingleProduct = {product} id = {getIdToDelete} />
+                  <SingleProduct key = {product.id} SingleProduct = {product} id = {getIdToDelete} />
                 ))
                 }
                
             </Grid>
         </Container>
+        <div id = "footer"> 
+                  <h2 className="center"> Scandiweb Test assignment  </h2>
+        </div>
     </div>
   )
 }

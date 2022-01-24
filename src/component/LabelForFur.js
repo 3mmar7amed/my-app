@@ -1,8 +1,7 @@
 
 import { makeStyles } from '@material-ui/core'
-import {Component, useState , useEffect} from 'react'
+import {useState } from 'react'
 import TextField from '@material-ui/core/TextField'
-import { width } from '@mui/system'
 
 
 const LabelForFur = ({PassToParent})=> {

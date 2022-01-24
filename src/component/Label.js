@@ -1,9 +1,7 @@
 
 import { makeStyles } from '@material-ui/core'
-import {Component, useState , useEffect} from 'react'
+import {useState , useEffect} from 'react'
 import TextField from '@material-ui/core/TextField'
-import { ToastProvider, useToasts } from 'react-toast-notifications';
-import WarnignMessage from './WarnignMessage'
 
 const Label = ({label , PassToParent , state ,labelValue })=> {
     
@@ -12,7 +10,6 @@ const Label = ({label , PassToParent , state ,labelValue })=> {
     const HandleInput = (value)=> {
 
         let val = parseFloat(value)
-
 
         if(isNaN(val)){
             setvalueError(true)

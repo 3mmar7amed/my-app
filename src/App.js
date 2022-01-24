@@ -1,9 +1,9 @@
 import './App.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import {createTheme , ThemeProvider, withTheme } from '@material-ui/core'
+import {createTheme , ThemeProvider } from '@material-ui/core'
 import ProductsList from './component/ProductsList';
 import SetProducts from './component/SetProducts'
-import {Component, useState , useEffect} from 'react'
+import {useState , useEffect} from 'react'
 import ReactNotification from 'react-notifications-component'
 
 function App() {
@@ -30,10 +30,14 @@ const theme = createTheme({
 })
 
     useEffect(() => {
-      fetch('http://localhost:8000/products')
+      fetch('https://juniortest-ammar-hamed.herokuapp.com/')
         .then(res => res.json())
         .then(data => setProducts(data))
     }, [])
+
+
+
+
 
      return (
       <ThemeProvider theme={theme}>
@@ -42,7 +46,7 @@ const theme = createTheme({
         <Router>
           <Routes>
           <Route path='/' element={<ProductsList Products = {Products} />} />
-          <Route path="/create" element={<SetProducts />} />
+          <Route path="/addproduct" element={<SetProducts />} />
         </Routes>
       
       </Router>

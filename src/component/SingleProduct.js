@@ -1,11 +1,12 @@
 
-import {FaTimes} from 'react-icons/fa' 
-import Paper from '@material-ui/core/Paper'
 import Card from '@material-ui/core/Card'
 import Checkbox from '@mui/material/Checkbox';
 import Grid from '@material-ui/core/Grid'
 import { CardHeader } from '@material-ui/core'
 import React, { useState } from 'react'
+import { Container, Typography } from "@material-ui/core";
+import { borders } from '@mui/system';
+
 
 const SingleProduct = ({SingleProduct , id})=>{
 
@@ -22,14 +23,29 @@ const SingleProduct = ({SingleProduct , id})=>{
 
         <Grid item xm={12} md={6} lg={4} >
             
-            <Card>
+            <Card style={{ border: "black 2px solid"}} className="out-card" sx={{ border: 50 }}  >
             <Checkbox {...label} 
                 checked= {checked}
                 onChange={(e) => handleChange(e , SingleProduct.id)}
              />
-            <CardHeader   title = {SingleProduct.name}/>
+                <div className='card'>
+           <Typography variant="h5" component="div">
             {SingleProduct.SKU}  
+           </Typography>
+            <Typography variant="h5" component="div">
+            {SingleProduct.name}  
+           </Typography>
+           <Typography variant="h5" component="div">
+           {SingleProduct.dimension} 
+           </Typography>
+           <Typography variant="h5" component="div">
+           {SingleProduct.price} 
+           </Typography>
+            
+            
+            </div>
             </Card>
+            
         </Grid>
         
     )

@@ -18,7 +18,31 @@ body {
 }
 
 .btn{
+
   float: right ; 
   padding: 20px;
   margin: 5px;
+}
+
+.card{
+  align-items: center;
+  text-align: center;
+}
+.out-card{
+  border: black 20bx;
+}
+.line{
+  height:2px;
+  border-width:0;
+  color:gray;
+  background-color:gray;
+}
+.center{
+  align-items: center;
+  text-align: center;
+
+}
+.add{
+  margin-right: 5px ;
+  padding: 10px ;
 }
