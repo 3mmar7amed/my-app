@@ -27,8 +27,8 @@ const SetProduct = ()=>{
         setPriceError(false)
         setTypeError(false)
 
-        SKU === '' ? setSKUError(true) : setSKUError(false)
-        Name === '' ? setNameError(true) : setNameError(false)
+        CheckError(SKU) ? setSKUError(true) : setSKUError(false)
+        CheckError(Name) ? setNameError(true) : setNameError(false)
         Price === '' ? setPriceError(true) : setPriceError(false) 
         Type === "" ||dimension === "" ?  setTypeError(true) : setTypeError(false)
         console.log("indicatedPriceType",indicatedPriceType , "indicatedOptionType" , indicatedOptionType) ;
