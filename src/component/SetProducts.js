@@ -55,7 +55,7 @@ const SetProduct = ()=>{
             body: JSON.stringify(product),
           })
 
-          //window.location.reload();
+          window.location.reload();
     }
 
     const InputData = (returnedData)=> {
