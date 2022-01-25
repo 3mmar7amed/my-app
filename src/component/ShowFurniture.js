@@ -50,12 +50,6 @@ const ShowFurniture = ({FurnitureData , Type})=> {
         setTypeLenght(type)
     }
 
-    const handleTypes = (type)=> {
-
-
-        console.log("TypeHeight" , TypeHeight , "TypeWidth" , TypeWidth , "TypeLenght" , TypeLenght )
-        TypeHeight&&TypeWidth&&TypeLenght ? Type(true) : Type(false)
-    }
 
     return (
 
