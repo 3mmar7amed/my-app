@@ -6,33 +6,32 @@ import 'react-notifications-component/dist/theme.css'
 import { store } from 'react-notifications-component';
 
 
-const Label = ({label , PassToParent , state , ISNumber })=> {
+const Label = ({label , PassToParent  , IndicatedType })=> {
     
     const HandleInput = (value)=> {
 
 
         let val = parseFloat(value)
+        console.log("the value is " , val)
 
         if(isNaN(val)){
             setvalueError(true)
             settextError("incrorrect input , please input only numbers !")
+            IndicatedType(false)
         }
             
         else {
             setvalueError(false)
             settextError("that's a correct input")
-            PassToParent(val)
+            IndicatedType(true)
         }
+        PassToParent(val)
 
-        ISNumber(!valueError)
-
-        
-        
     }
 
    
   
-    const [valueError,setvalueError] = useState(state)
+    const [valueError,setvalueError] = useState(false)
     const [textError,settextError] = useState('')
   
   

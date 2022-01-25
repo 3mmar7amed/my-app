@@ -18,7 +18,7 @@ const LabelForFur = ({PassToParent})=> {
     const HandleInput = (value)=> {
 
         let val = parseFloat(value)
-        console.log(val)
+     
 
 
         if(isNaN(val)){

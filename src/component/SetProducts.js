@@ -27,17 +27,20 @@ const SetProduct = ()=>{
         setPriceError(false)
         setTypeError(false)
 
-
         SKU === '' ? setSKUError(true) : setSKUError(false)
         Name === '' ? setNameError(true) : setNameError(false)
         Price === '' ? setPriceError(true) : setPriceError(false) 
         Type === "" ||dimension === "" ?  setTypeError(true) : setTypeError(false)
-        if(!PriceIsNumber)
-        WariningMessage("Please, provide the data of indicated type")
-        else {
-          SKU && Name && Price && Type && !PriceError && dimension ? PostProduct({SKU , Name , Price , Type , dimension}) 
-          : WariningMessage("Please, submit required data")
+        console.log("indicatedPriceType",indicatedPriceType , "indicatedOptionType" , indicatedOptionType) ;
+
+        if(SKU === '' || Name === '' ||Price === '' || Type === '' ||dimension === ''  ) {
+          WariningMessage("Please, submit required data")
         }
+        else if(CheckError(SKU) || CheckError(Name) || !indicatedPriceType || !indicatedOptionType) {
+          WariningMessage("Please, provide the data of indicated type")
+        }
+        else PostProduct({SKU , Name , Price , Type , dimension}) 
+
     }
 
 
@@ -52,11 +55,16 @@ const SetProduct = ()=>{
             body: JSON.stringify(product),
           })
 
-          window.location.reload();
+          //window.location.reload();
     }
 
     const InputData = (returnedData)=> {
+      console.log("returned data",returnedData)
         setdimension(returnedData)
+    }
+
+    const CheckError= (state)=> {
+      return !/^[a-zA-Z0-9]+$/.test(state) ; 
     }
 
     const useStyles = makeStyles({
@@ -82,16 +90,16 @@ const SetProduct = ()=>{
     const [PriceError, setPriceError] = useState(false)
     const [typeError, setTypeError] = useState(false)
 
-    const [PriceIsNumber, setPriceIsNumber] = useState(true)
+    const [indicatedOptionType, setindicatedOptionType] = useState(false)
+    const [indicatedPriceType, setindicatedPriceType] = useState(false)
 
 
       const WariningMessage = (text) => {
 
         let txt = String(text)
-        console.log(typeof txt)
         store.addNotification({
             title: "Warning!",
-            message: {txt},
+            message: txt,
             type: "warning",
             insert: "top",
             container: "top-right",
@@ -166,7 +174,7 @@ const SetProduct = ()=>{
                 
 
                 <div id = "price">
-                        <Label label = "Price" state = {PriceError}  PassToParent = {setPrice} ISNumber = {setPriceIsNumber} />
+                        <Label label = "Price"  PassToParent = {setPrice} IndicatedType = {setindicatedPriceType} />
                 </div>
                 
                 
@@ -190,7 +198,8 @@ const SetProduct = ()=>{
                             <MenuItem value={"Furniture"}>Furniture </MenuItem>
                             </Select>
                         
-                            { (Type && <Options  ReturnedData = {InputData} Value={Type} />) }
+                            { (Type && <Options  ReturnedData = {InputData} Value={Type} indicatedType = {setindicatedOptionType} />) }
+                            
                         </FormControl>
                 </div>
 
