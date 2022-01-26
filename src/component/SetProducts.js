@@ -53,7 +53,8 @@ const SetProduct = ()=>{
             },
             body: JSON.stringify(product),
           })
-          res.status === 200 ? window.location.reload() : console.log("error handling this post request")
+          console.log(res)
+          //res.status === 200 ? window.location.reload(): console.log("error handling this post request")
 
         }
 
