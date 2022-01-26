@@ -37,8 +37,7 @@ const ProductsList = ({ Products }) => {
       },
       body: JSON.stringify({IDsArray}),
     })
-
-    window.location.reload();
+    res.status === 200 ? window.location.reload() : console.log("error handling this Delete request")
     }
     else console.log("size is == 0 && nothing to delete ")
   }
