@@ -31,7 +31,6 @@ const SetProduct = ()=>{
         CheckError(Name) ? setNameError(true) : setNameError(false)
         Price === '' ? setPriceError(true) : setPriceError(false) 
         Type === "" ||dimension === "" ?  setTypeError(true) : setTypeError(false)
-        console.log("indicatedPriceType",indicatedPriceType , "indicatedOptionType" , indicatedOptionType) ;
 
         if(SKU === '' || Name === '' ||Price === '' || Type === '' ||dimension === ''  ) {
           WariningMessage("Please, submit required data")
@@ -45,7 +44,6 @@ const SetProduct = ()=>{
 
 
     const PostProduct = async (product)=> {
-        console.log(product)
         const res = await fetch('https://juniortest-ammar-hamed.herokuapp.com/create', {
             method: 'POST',
             headers: {
@@ -53,8 +51,7 @@ const SetProduct = ()=>{
             },
             body: JSON.stringify(product),
           })
-          console.log(res)
-          //res.status === 200 ? window.location.reload(): console.log("error handling this post request")
+          res.status === 200 ? window.location.reload(): console.log("error handling this post request")
 
         }
 

@@ -12,7 +12,6 @@ const Label = ({label , PassToParent  , IndicatedType })=> {
 
 
         let val = parseFloat(value)
-        console.log("the value is " , val)
 
         if(isNaN(val)){
             setvalueError(true)

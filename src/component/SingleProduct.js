@@ -2,10 +2,9 @@
 import Card from '@material-ui/core/Card'
 import Checkbox from '@mui/material/Checkbox';
 import Grid from '@material-ui/core/Grid'
-import { CardHeader } from '@material-ui/core'
 import React, { useState } from 'react'
-import { Container, Typography } from "@material-ui/core";
-import { borders } from '@mui/system';
+import {Typography } from "@material-ui/core";
+
 
 
 const SingleProduct = ({SingleProduct , id})=>{

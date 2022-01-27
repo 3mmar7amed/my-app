@@ -8,7 +8,6 @@ const Options = ({Value , ReturnedData , indicatedType } )=> {
         ReturnedData(data)
     }
     const validDateTypes = (type)=> {
-        console.log("sent type is ",type)
         indicatedType(type)
     }
 

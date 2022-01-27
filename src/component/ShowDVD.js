@@ -9,7 +9,6 @@ const ShowDVD = ({DVDdata , Type})=> {
         DVDdata(EnteredData + "MB")
     }
     const validateTypes = (type)=> {
-        console.log(type)
         Type(type)
     }
 
