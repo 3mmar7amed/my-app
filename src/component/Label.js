@@ -4,6 +4,7 @@ import {useState , useEffect} from 'react'
 import TextField from '@material-ui/core/TextField'
 import 'react-notifications-component/dist/theme.css'
 import { store } from 'react-notifications-component';
+import Box from '@mui/material/Box';
 
 
 const Label = ({label , PassToParent  , IndicatedType })=> {
@@ -54,7 +55,7 @@ const Label = ({label , PassToParent  , IndicatedType })=> {
     variant="outlined"
     color="secondary"
     multiline
-    rows={4}
+    rows={1}
     fullWidth
     required
     key= {0}

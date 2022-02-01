@@ -1,8 +1,8 @@
 
 import Label from "./Label";
-
 import {useState} from 'react'
-
+import Stack from '@mui/material/Stack';
+import { Typography } from "@material-ui/core";
 
 const ShowFurniture = ({FurnitureData , Type})=> {
 
@@ -54,9 +54,43 @@ const ShowFurniture = ({FurnitureData , Type})=> {
     return (
 
         <>
-        <div id = "height"><Label IndicatedType = {validateHeightTypes} label = "Heihgt" PassToParent = {HandleHeihgt} /></div>
-        <div id = "width"><Label IndicatedType = {validateWidthTypes} label = "Width" PassToParent = {HandleWidth} /></div>
-        <div id = "length"><Label IndicatedType = {validateLengthTypes} label = "Lenght" PassToParent = {HandleLength} /></div>
+            <Typography 
+            variant = "h6"
+            cplor = "textSecondary"
+            component = "h2"
+            gutterBottom
+            
+            >
+            Please, provide dimensions
+            <div id = "height">
+                    <Stack  direction="row" spacing={5}>
+                        Height (CM)
+                        <Label IndicatedType = {validateHeightTypes} label = "Heihgt" PassToParent = {HandleHeihgt} />
+                    </Stack>
+            </div>
+
+
+
+          
+             
+          <div id = "width">
+            <Stack direction="row" spacing={5}>
+                    Width (CM)
+                    <Label IndicatedType = {validateWidthTypes} label = "Width" PassToParent = {HandleWidth} />
+            </Stack>
+        </div>
+          
+
+          
+        <div id = "length">
+          <Stack direction="row" spacing={5}>
+              Length (CM)
+              <Label IndicatedType = {validateLengthTypes} label = "Lenght" PassToParent = {HandleLength} />
+            </Stack>
+        </div>
+          
+            </Typography>
+       
         </>
     )
 

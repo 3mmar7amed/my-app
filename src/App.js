@@ -47,6 +47,7 @@ const theme = createTheme({
           <Routes>
           <Route path='/' element={<ProductsList Products = {Products} />} />
           <Route path="/addproduct" element={<SetProducts />} />
+
         </Routes>
       
       </Router>

@@ -1,6 +1,8 @@
 
 
 import Label from "./Label";
+import { Typography } from "@material-ui/core";
+import Stack from '@mui/material/Stack';
 
 const ShowDVD = ({DVDdata , Type})=> {
 
@@ -14,7 +16,19 @@ const ShowDVD = ({DVDdata , Type})=> {
 
     return (
         <div id = "size">
-            <Label PassToParent = {havingDATA}  IndicatedType = {validateTypes}  label = "Size(MB)" />
+            <Typography 
+            variant = "h6"
+            cplor = "textSecondary"
+            component = "h2"
+            gutterBottom
+            
+            >
+            Please, provide size
+            <Stack direction="row" spacing={5}>
+                Size (MP)
+                <Label PassToParent = {havingDATA}  IndicatedType = {validateTypes}  label = "Size(MB)" />
+          </Stack>
+            </Typography>
         </div>
     )
 
