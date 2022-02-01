@@ -13,12 +13,8 @@ import Button1 from './Button1'
 import 'react-notifications-component/dist/theme.css'
 import { store } from 'react-notifications-component';
 import Stack from '@mui/material/Stack';
-import { Link } from 'react-router-dom';
-import { useNavigate } from 'react-router-dom';
 
 const SetProduct = ()=>{
-
-  const navigate = useNavigate();
 
 
     const handlesubmit = (e)=> {
