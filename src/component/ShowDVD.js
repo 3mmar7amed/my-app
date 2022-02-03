@@ -23,7 +23,6 @@ const ShowDVD = ({DVDdata , Type})=> {
             cplor = "textSecondary"
             component = "h2"
             gutterBottom
-            
             >
             Please, provide size
             <Stack direction="row" spacing={5}>
@@ -32,7 +31,7 @@ const ShowDVD = ({DVDdata , Type})=> {
                 
           </Stack>
             </Typography>
-            
+
         </div>
         
     )
