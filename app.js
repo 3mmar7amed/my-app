@@ -12,7 +12,6 @@ if(process.env.NODE_ENV === "production") {
 
     
     app.get('*' , (req ,res) => {
-        console.log("iam here in app.get")
         res.sendFile(path.join(__dirname, 'build', 'index.html'))
     
     })

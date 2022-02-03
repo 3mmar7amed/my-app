@@ -57,7 +57,7 @@ const SetProduct = ()=>{
     }
 
     const CheckError= (state)=> {
-      return !/^[a-zA-Z0-9]+$/.test(state) ; 
+      return !/^[a-zA-Z0-9 | ]+$/.test(state) ; 
     }
 
     const useStyles = makeStyles({
