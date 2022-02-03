@@ -111,6 +111,8 @@ const SetProduct = () => {
     });
   };
 
+
+
   return (
     <Container>
       <form
@@ -194,9 +196,9 @@ const SetProduct = () => {
             <MenuItem value="">
               <em>None</em>
             </MenuItem>
-            <MenuItem value={"DVD"}>DVD </MenuItem>
-            <MenuItem value={"Book"}>Book</MenuItem>
-            <MenuItem value={"Furniture"}>Furniture </MenuItem>
+            <MenuItem id = "DVD" value={"DVD"}>DVD </MenuItem>
+            <MenuItem id = "Book" value={"Book"}>Book</MenuItem>
+            <MenuItem id = "Furniture" value={"Furniture"}>Furniture </MenuItem>
           </Select>
 
           {Type && (
@@ -206,6 +208,8 @@ const SetProduct = () => {
               indicatedType={setindicatedOptionType}
             />
           )}
+
+
         </FormControl>
       </form>
     </Container>

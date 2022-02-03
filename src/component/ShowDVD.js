@@ -26,7 +26,7 @@ const ShowDVD = ({DVDdata , Type})=> {
             Please, provide size
             <Stack direction="row" spacing={5}>
                 Size (MP)
-                <div id = "size" > <Label PassToParent = {havingDATA}  IndicatedType = {validateTypes}  label = "Size(MB)" /> </div>
+                <Label id = "size" PassToParent = {havingDATA}  IndicatedType = {validateTypes}  label = "Size(MB)" />
                 
           </Stack>
             </Typography>
