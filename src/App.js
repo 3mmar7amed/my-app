@@ -43,7 +43,7 @@ const theme = createTheme({
       <ThemeProvider theme={theme}>
         <ReactNotification />
 
-        <Router>
+        <Router >
           <Routes>
           <Route path='/' element={<ProductsList Products = {Products} />} />
           <Route path="/addproduct" element={<SetProducts />} />
