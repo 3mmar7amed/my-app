@@ -15,6 +15,7 @@ const ShowBook = ({BookData , Type})=> {
 
 
     return (
+        <div id = "Book">
             <Typography 
             variant = "h6"
             cplor = "textSecondary"
@@ -29,6 +30,7 @@ const ShowBook = ({BookData , Type})=> {
                 <Label id = "weight"  PassToParent = {havingDATA} IndicatedType = {validateTypes} label = "Weight(KG)"/>
           </Stack>
             </Typography>
+         </div>
             
         
 

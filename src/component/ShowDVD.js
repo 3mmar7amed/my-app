@@ -15,6 +15,8 @@ const ShowDVD = ({DVDdata , Type})=> {
     }
 
     return (
+
+        <div id = "DVD">
         
             <Typography 
             variant = "h6"
@@ -30,6 +32,8 @@ const ShowDVD = ({DVDdata , Type})=> {
                 
           </Stack>
             </Typography>
+            
+        </div>
         
     )
 

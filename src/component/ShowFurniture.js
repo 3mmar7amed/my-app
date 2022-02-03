@@ -53,7 +53,7 @@ const ShowFurniture = ({FurnitureData , Type})=> {
 
     return (
 
-        <>
+        <div id = "Furniture">
             <Typography 
             variant = "h6"
             cplor = "textSecondary"
@@ -91,7 +91,7 @@ const ShowFurniture = ({FurnitureData , Type})=> {
           
             </Typography>
        
-        </>
+        </div>
     )
 
 }

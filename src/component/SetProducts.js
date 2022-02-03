@@ -196,9 +196,9 @@ const SetProduct = () => {
             <MenuItem value="">
               <em>None</em>
             </MenuItem>
-            <MenuItem id = "DVD" value={"DVD"}>DVD </MenuItem>
-            <MenuItem id = "Book" value={"Book"}>Book</MenuItem>
-            <MenuItem id = "Furniture" value={"Furniture"}>Furniture </MenuItem>
+            <MenuItem value={"DVD"}>DVD </MenuItem>
+            <MenuItem  value={"Book"}>Book</MenuItem>
+            <MenuItem value={"Furniture"}>Furniture </MenuItem>
           </Select>
 
           {Type && (
