@@ -112,8 +112,9 @@ const SetProduct = ()=>{
 
     return (
         <Container>
-         <div id = "product_form">
-            <form noValidate autoComplete="off" onSubmit= {handlesubmit}>
+
+
+            <form id = "product_form" noValidate autoComplete="off" onSubmit= {handlesubmit}>
         
         <Typography 
             variant = "h6"
@@ -135,7 +136,6 @@ const SetProduct = ()=>{
 
             </Typography>
 
-                <div id = "sku">
                     
                         <TextField className={classes.field}
                         onChange={(e) => setSKU(e.target.value)}
@@ -146,11 +146,10 @@ const SetProduct = ()=>{
                         required
                         error={SKUError}
                         value={SKU}
+                        id = "sku"
                         />
-                </div>
                
 
-                <div id = "name">
                         <TextField className={classes.field}
                         onChange={(e) => setName(e.target.value)}
                         label="Name"
@@ -162,21 +161,18 @@ const SetProduct = ()=>{
                         required
                         error={NameError}
                         value={Name}
+                        id = "name"
                         />
-                </div>
                 
 
-                <div id = "price">
-                        <Label label = "Price"  PassToParent = {setPrice} IndicatedType = {setindicatedPriceType} />
-                </div>
+                        <Label id = "price" label = "Price"  PassToParent = {setPrice} IndicatedType = {setindicatedPriceType} />
                 
                 
-                <div id = "productType">
                         <FormControl sx={{ m: 1, minWidth: 80 }} required   className={classes.field}>
                             <InputLabel id="demo-simple-select-autowidth-label">Type</InputLabel>
                             <Select
                             labelId="demo-simple-select-autowidth-label"
-                            id="demo-simple-select-autowidth"
+                            id="productType"
                             value={Type}
                             onChange={(e) => setType(e.target.value) }
                             autoWidth
@@ -197,12 +193,8 @@ const SetProduct = ()=>{
                             { (Type && <Options  ReturnedData = {InputData} Value={Type} indicatedType = {setindicatedOptionType} />) }
                             
                         </FormControl>
-                </div>
 
-            </form>
-
-            </div>
-        
+            </form>        
             
         </Container>
         

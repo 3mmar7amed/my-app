@@ -15,7 +15,7 @@ const ShowDVD = ({DVDdata , Type})=> {
     }
 
     return (
-        <div id = "size">
+        
             <Typography 
             variant = "h6"
             cplor = "textSecondary"
@@ -26,10 +26,11 @@ const ShowDVD = ({DVDdata , Type})=> {
             Please, provide size
             <Stack direction="row" spacing={5}>
                 Size (MP)
-                <Label PassToParent = {havingDATA}  IndicatedType = {validateTypes}  label = "Size(MB)" />
+                <div id = "size" > <Label PassToParent = {havingDATA}  IndicatedType = {validateTypes}  label = "Size(MB)" /> </div>
+                
           </Stack>
             </Typography>
-        </div>
+        
     )
 
 }

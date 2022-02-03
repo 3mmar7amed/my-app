@@ -7,7 +7,7 @@ import { store } from 'react-notifications-component';
 import Box from '@mui/material/Box';
 
 
-const Label = ({label , PassToParent  , IndicatedType })=> {
+const Label = ({label , PassToParent  , IndicatedType , id})=> {
     
     const HandleInput = (value)=> {
 
@@ -61,6 +61,7 @@ const Label = ({label , PassToParent  , IndicatedType })=> {
     key= {0}
     error = {valueError}
     helperText={textError}
+    id = {id}
     />
 
     </>
