@@ -1,11 +1,29 @@
 const express = require('express');
-const path = require('path');
-const app = express();
+const { request } = require('http');
+const { resolve } = require('path');
+const app = express()
+const path = require('path')
 
-app.use(express.static(path.join(__dirname, 'build')));
 
-+app.get('/*', function (req, res) {
-  res.sendFile(path.join(__dirname, 'build', 'index.html'));
-});
+const port = process.env.PORT || 50000 ; 
 
-app.listen(9000);
+if(process.env.NODE_ENV === "production") {
+    app.use(express.static(path.join(__dirname, 'build')));
+
+    
+    +app.get('/*' , (req ,res) => {
+    
+        req.sendFile(path.join(__dirname, 'build', 'index.html'))
+    })
+    app.get('/addproduct' , (req ,res) => {
+    
+        req.sendFile(path.join(__dirname, 'build', 'index.html'))
+    })
+}
+
+app.listen(port , (err) => {
+
+    if(err) return  console.log(err)
+    console.log("server running on port " , port )
+
+})
