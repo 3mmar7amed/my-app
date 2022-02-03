@@ -193,12 +193,18 @@ const SetProduct = () => {
             label="Type"
             error={typeError}
           >
-            <MenuItem value="">
-              <em>None</em>
-            </MenuItem>
-            <MenuItem id = "DVD" value={"DVD"}>DVD </MenuItem>
-            <MenuItem id = "Book"  value={"Book"}>Book</MenuItem>
-            <MenuItem id = "Furniture" value={"Furniture"}>Furniture </MenuItem>
+              <NativeSelect
+                  defaultValue={''}
+                  inputProps={{
+                    name: 'age',
+                    id: 'uncontrolled-native',
+                  }}
+                >
+                  <option value = ''>NONE</option>
+                  <option value={"DVD"}>DVD</option>
+                  <option value={"Book"}>Book</option>
+                  <option value={"Furniture"}>Furniture</option>
+                </NativeSelect>
           </Select>
 
           {Type && (
