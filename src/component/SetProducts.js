@@ -45,6 +45,8 @@ const SetProduct = () => {
     } else PostProduct({ SKU, Name, Price, Type, dimension });
   };
 
+
+
   const PostProduct = async (product) => {
     const res = await fetch(
       "https://juniortest-ammar-hamed.herokuapp.com/create",
@@ -196,7 +198,7 @@ const SetProduct = () => {
             <MenuItem value="">
               <em>None</em>
             </MenuItem>
-            <MenuItem  value={"DVD"}>DVD </MenuItem>
+            <MenuItem label = "DVD" value={"DVD"}>DVD </MenuItem>
             <MenuItem  value={"Book"}>Book</MenuItem>
             <MenuItem  value={"Furniture"}>Furniture </MenuItem>
           </Select>
