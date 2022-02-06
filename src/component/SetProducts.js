@@ -194,7 +194,9 @@ const SetProduct = () => {
             autoWidth
             label="Type"
             error={typeError}
-          >
+            inputProps={{ "data-testid": "select"  , "id" :"productType" }}
+                              
+            >
             <MenuItem value="">
               <em>None</em>
             </MenuItem>
