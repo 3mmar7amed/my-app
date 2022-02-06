@@ -8,12 +8,7 @@ describe("add invalid DVD Product" , ()=> {
         cy.findByLabelText('Type').type('DVD{enter}');
         cy.findByRole('textbox', { name: /Size/i }).type('InvalidInput');
         cy.findByRole('button', {name: /Save/i}).click()
-
-
-        cy.findByLabelText('Type').type('DVD{enter}');
-        cy.findByRole('textbox', { name: /Weight/i }).type('InvalidInput');
-        cy.findByRole('button', {name: /Save/i}).click()
-
+        cy.wait(5000)
 
     })
 })
@@ -28,8 +23,7 @@ describe("add invalid Book Products" , ()=> {
         cy.findByLabelText('Type').type('Book{enter}');
         cy.findByRole('textbox', { name: /Weight/i }).type('InvalidInput');
         cy.findByRole('button', {name: /Save/i}).click()
-
-
+        cy.wait(5000)
     })
 })
 
@@ -47,6 +41,7 @@ describe("add invalid Furniture Products" , ()=> {
 
         cy.findByRole('button', {name: /Save/i}).click()
 
+        cy.wait(5000)
 
     })
 })
