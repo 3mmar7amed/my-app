@@ -19,6 +19,7 @@ describe('test in setProduct component ', () => {
         userEvent.type(screen.getByLabelText(/Size/i) , '200')
 
         expect(screen.getByText("Please, provide size"))  
+        userEvent.click(screen.getByText('Save'))
 
     });
   });
@@ -35,8 +36,10 @@ describe('test in setProduct component ', () => {
       fireEvent.change(screen.getByTestId('select'), {
         target: { value: "Book" },
         });
+        
         userEvent.type(screen.getByLabelText(/Weight/i) , '200')
         expect(screen.getByText("Please, provide weight")) 
+        userEvent.click(screen.getByText('Save'))
 
     });
   });
@@ -59,29 +62,8 @@ describe('test in setProduct component ', () => {
         userEvent.type(screen.getByLabelText(/Width/i) , '200')
 
       expect(screen.getByText("Please, provide dimensions")) 
+      userEvent.click(screen.getByText('Save'))
           
     });
 
-  });
-
-
-  describe('test in setProduct component ', () => {
-    test('test write values with unindicated type for a product ', async () => {
-
-      const { result }  = render(<SetProduct />);
-      let badName = '#$badName'  ;
-      let badSKU =  '#$%badSKU' ; 
-      let badPrice = 'badPrice22' ; 
-      let badWeight = 'badWeight100' ; 
-      userEvent.type(screen.getByLabelText(/Price/i) ,badPrice)
-      userEvent.type(screen.getByLabelText(/SKU/i) ,badSKU)
-      userEvent.type(screen.getByLabelText(/Name/i) , badName)
-      fireEvent.change(screen.getByTestId('select'), {
-        target: { value: "Book" },
-        });
-        // doesnot work !!!!!!!!!!!!!!!!!!
-        userEvent.type( screen.getByLabelText(/Weight/i) , badWeight)
-        userEvent.click(screen.getByText('Save'))
-
-    });
   });
