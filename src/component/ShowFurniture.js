@@ -62,32 +62,22 @@ const ShowFurniture = ({FurnitureData , Type})=> {
             
             >
             Please, provide dimensions
-            <div id = "height">
-                    <Stack  direction="row" spacing={5}>
+            <Stack  direction="row" spacing={5}>
                         Height (CM)
-                        <Label IndicatedType = {validateHeightTypes} label = "Heihgt" PassToParent = {HandleHeihgt} />
-                    </Stack>
-            </div>
+                <Label id = "height" IndicatedType = {validateHeightTypes} label = "Heihgt" PassToParent = {HandleHeihgt} />
+            </Stack>
 
-
-
-          
-             
-          <div id = "width">
             <Stack direction="row" spacing={5}>
                     Width (CM)
-                    <Label IndicatedType = {validateWidthTypes} label = "Width" PassToParent = {HandleWidth} />
+                    <Label id = "width" IndicatedType = {validateWidthTypes} label = "Width" PassToParent = {HandleWidth} />
             </Stack>
-        </div>
           
 
           
-        <div id = "length">
-          <Stack direction="row" spacing={5}>
+        <Stack direction="row" spacing={5}>
               Length (CM)
-              <Label IndicatedType = {validateLengthTypes} label = "Lenght" PassToParent = {HandleLength} />
-            </Stack>
-        </div>
+              <Label id = "length" IndicatedType = {validateLengthTypes} label = "Lenght" PassToParent = {HandleLength} />
+        </Stack>
           
             </Typography>
        

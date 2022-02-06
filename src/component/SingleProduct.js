@@ -41,7 +41,7 @@ const SingleProduct = ({SingleProduct , id})=>{
            {SingleProduct.dimension} 
            </Typography>
            <Typography variant="h5" component="div">
-           {SingleProduct.price} 
+           {SingleProduct.price} $
            </Typography>
              
         </div>

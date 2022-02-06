@@ -11,8 +11,8 @@ import Options from "./Options";
 import Label from "./Label";
 import Button1 from "./Button1";
 import "react-notifications-component/dist/theme.css";
-import { store } from "react-notifications-component";
 import Stack from "@mui/material/Stack";
+import { ReactNotifications, store, Store } from 'react-notifications-component'
 
 const SetProduct = () => {
   const handlesubmit = (e) => {
