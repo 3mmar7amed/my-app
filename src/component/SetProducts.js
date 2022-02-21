@@ -179,13 +179,7 @@ const SetProduct = () => {
           PassToParent={setPrice}
           IndicatedType={setindicatedPriceType}
         />
-
-        <FormControl
-          sx={{ m: 1, minWidth: 80 }}
-          required
-          className={classes.field}
-        >
-          <div class="custom-select" style="width:200px;">
+         <div class="custom-select" style="width:200px;">
             <select id = "productType" onError={typeError} onChange={(e) => setType(e.target.value)}>
               <option value="">Type</option>
 
@@ -195,6 +189,13 @@ const SetProduct = () => {
               
             </select>
           </div>
+
+        <FormControl
+          sx={{ m: 1, minWidth: 80 }}
+          required
+          className={classes.field}
+        >
+         
 
           {/* <InputLabel id="demo-simple-select-autowidth-label">Type</InputLabel>
           <Select
@@ -215,8 +216,9 @@ const SetProduct = () => {
             <MenuItem  value={"Book"}>Book</MenuItem>
             <MenuItem  value={"Furniture"}>Furniture </MenuItem>
           </Select> */}
+        </FormControl>
 
-          {Type && (
+        {Type && (
             <Options
               ReturnedData={InputData}
               Value={Type}
@@ -224,8 +226,6 @@ const SetProduct = () => {
             />
           )}
 
-
-        </FormControl>
       </form>
     </Container>
   );
