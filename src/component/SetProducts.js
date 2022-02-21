@@ -185,7 +185,6 @@ const SetProduct = () => {
               <option value="Book">Book</option>
               <option value="DVD">DVD</option>
               <option value="Furniture">Furniture</option>
-              
             </select>
           </div>
 

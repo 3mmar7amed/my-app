@@ -30,7 +30,18 @@ const ProductsList = ({ Products }) => {
       for (const [key, value] of Products_IDs.entries()) {
         IDsArray.push(value) ; 
       }
-      const res = await fetch(`https://juniortest-ammar-hamed.herokuapp.com/Delete`, {
+    }
+
+    else {
+      Products.map((product) => (
+        IDsArray.push(product.id)
+        
+      ))
+
+    }
+
+
+    const res = await fetch(`https://juniortest-ammar-hamed.herokuapp.com/Delete`, {
       method: 'DELETE',
       headers: {
         'Content-type': 'application/json',
@@ -38,8 +49,6 @@ const ProductsList = ({ Products }) => {
       body: JSON.stringify({IDsArray}),
     })
     res.status === 200 ? window.location.reload() : console.log("error handling this Delete request")
-    }
-    else console.log("size is == 0 && nothing to delete ")
   }
 
   return (
