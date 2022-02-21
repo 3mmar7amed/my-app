@@ -43,10 +43,20 @@ const ProductsList = ({ Products }) => {
 
     else {
       
-      // Products.map((product) => (
-      //   IDsArray.push(product.id)
+      Products.map((product) => (
+        IDsArray.push(product.id)
         
-      // ))
+      ))
+      if(IDsArray.length > 0) { 
+            const res = await fetch(`https://juniortest-ammar-hamed.herokuapp.com/Delete`, {
+              method: 'DELETE',
+              headers: {
+                'Content-type': 'application/json',
+              },
+              body: JSON.stringify({IDsArray}),
+            })
+            res.status === 200 ? window.location.reload() : console.log("error handling this Delete request")
+      }
 
     }
 
