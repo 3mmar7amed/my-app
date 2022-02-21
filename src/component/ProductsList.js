@@ -33,10 +33,10 @@ const ProductsList = ({ Products }) => {
     }
 
     else {
-      Products.map((product) => (
-        IDsArray.push(product.id)
+      // Products.map((product) => (
+      //   IDsArray.push(product.id)
         
-      ))
+      // ))
 
     }
 
