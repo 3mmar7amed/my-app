@@ -185,7 +185,18 @@ const SetProduct = () => {
           required
           className={classes.field}
         >
-          <InputLabel id="demo-simple-select-autowidth-label">Type</InputLabel>
+          <div class="custom-select" style="width:200px;">
+            <select id = "productType" onError={typeError} onChange={(e) => setType(e.target.value)}>
+              <option value="">Type</option>
+
+              <option value="Book">Book</option>
+              <option value="DVD">DVD</option>
+              <option value="Furniture">Furniture</option>
+              
+            </select>
+          </div>
+
+          {/* <InputLabel id="demo-simple-select-autowidth-label">Type</InputLabel>
           <Select
             labelId="demo-simple-select-autowidth-label"
             id="productType"
@@ -203,7 +214,7 @@ const SetProduct = () => {
             <MenuItem label = "DVD" value={"DVD"}>DVD </MenuItem>
             <MenuItem  value={"Book"}>Book</MenuItem>
             <MenuItem  value={"Furniture"}>Furniture </MenuItem>
-          </Select>
+          </Select> */}
 
           {Type && (
             <Options
