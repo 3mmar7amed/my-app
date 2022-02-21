@@ -179,10 +179,9 @@ const SetProduct = () => {
           PassToParent={setPrice}
           IndicatedType={setindicatedPriceType}
         />
-         <div class="custom-select" style="width:200px;">
-            <select id = "productType" onError={typeError} onChange={(e) => setType(e.target.value)}>
-              <option value="">Type</option>
-
+         <div className="custom-select" >
+            <select id = "productType"  onChange={(e) => setType(e.target.value)}>
+              <option value="">Type Switcher</option>
               <option value="Book">Book</option>
               <option value="DVD">DVD</option>
               <option value="Furniture">Furniture</option>
