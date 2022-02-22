@@ -81,6 +81,8 @@ const SetProduct = () => {
   const InputData = (returnedData) => {
     setdimension(returnedData);
   };
+
+
 // this function return true if the user input an invalid input 
   const CheckError = (state) => {
     return !/^[a-zA-Z0-9 | ]+$/.test(state);
@@ -200,7 +202,7 @@ const SetProduct = () => {
         />
          <div className="custom-select" >
             <select id = "productType"  onChange={(e) => setType(e.target.value)}>
-              <option value="">Type Switcher</option>
+              <option label="Type" >Type Switcher</option>
               <option value="Book">Book</option>
               <option value="DVD">DVD</option>
               <option value="Furniture">Furniture</option>

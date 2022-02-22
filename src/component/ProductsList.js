@@ -24,7 +24,7 @@ const ProductsList = ({ Products }) => {
 
 
 // here we get the IDs from SingleProduct.js file , we put all the IDs in a map so i can add it and simply delete it from the map
-// if the user uncked the product , then when MASS DELETE button is clicked , i put all the IDs in an array called IDsArray 
+// if the user uncheck the product , then when MASS DELETE button is clicked , i put all the IDs in an array called IDsArray 
 // and sent it to the backend ...
 
 
