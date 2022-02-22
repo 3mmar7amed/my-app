@@ -59,8 +59,6 @@ const ProductsList = ({ Products }) => {
       }
 
     }
-
-
   }
 
   return (

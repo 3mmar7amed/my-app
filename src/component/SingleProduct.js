@@ -10,7 +10,14 @@ import {Typography } from "@material-ui/core";
 const SingleProduct = ({SingleProduct , id})=>{
 
     const [checked , setChecked] = useState(false)
-    let C = false 
+    console.log(SingleProduct.type)
+    let Size_Or_Weight_Or_Dimention = ''
+    if(SingleProduct.type === 'DVD') Size_Or_Weight_Or_Dimention = 'Size'
+    else if (SingleProduct.type === 'Book') Size_Or_Weight_Or_Dimention = 'Weight'
+    else if(SingleProduct.type = 'Furniture') Size_Or_Weight_Or_Dimention = 'Dimention'
+
+    
+
     const handleChange = (e ,productId ) => {
     
         id(productId , e.target.checked)
@@ -38,6 +45,7 @@ const SingleProduct = ({SingleProduct , id})=>{
             {SingleProduct.name}  
            </Typography>
            <Typography variant="h5" component="div">
+            {Size_Or_Weight_Or_Dimention + ':   '}
            {SingleProduct.dimension} 
            </Typography>
            <Typography variant="h5" component="div">
