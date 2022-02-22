@@ -99,6 +99,7 @@ const ProductsList = ({ Products }) => {
                 </Stack>
                 </div>
                 </div>
+                <hr className="line"  ></hr>
 
 
             </Typography>
