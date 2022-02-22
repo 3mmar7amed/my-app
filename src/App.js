@@ -28,7 +28,7 @@ const theme = createTheme({
     fontWeightBold: 700,
   }
 })
-
+    // get all products from the backend 
     useEffect(() => {
       fetch('https://juniortest-ammar-hamed.herokuapp.com/products')
         .then(res => res.json())

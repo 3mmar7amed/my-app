@@ -1,4 +1,6 @@
-
+/*
+this component is responsible for rendering the product options 
+*/
 import ShowBook from './ShowBook' 
 import ShowDVD from './ShowDVD' 
 import ShowFurniture from './ShowFurniture' 

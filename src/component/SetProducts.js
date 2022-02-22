@@ -1,3 +1,16 @@
+/*
+  this file is resposible for rendering the addProduct page and do the following 
+  firstly , the product is post via https://juniortest-ammar-hamed.herokuapp.com/create endpoint 
+  Secondly , check if the user input an appropriate product , if he doesnot , he mark the label with red ring around it 
+              if he wants to submit an invalid product , a warning message appeare for 5 seconds and
+             (WariningMessage) function is resposible for that ...
+
+  Label Component : is a component in Label.js file which is used to render Price label and product options labels (DVD / Book / Furniture)
+  Button1 Component : is a component in Button1.js file which is rendered whenever i need to add button , ex: (Save / Cansel)
+*/
+
+
+
 import { Container, Typography } from "@material-ui/core";
 import React, { useState } from "react";
 import { makeStyles } from "@material-ui/core";
@@ -15,6 +28,8 @@ import Stack from "@mui/material/Stack";
 import { ReactNotifications, store, Store } from 'react-notifications-component'
 
 const SetProduct = () => {
+
+
   const handlesubmit = (e) => {
     e.preventDefault();
     setSKUError(false);
@@ -66,7 +81,7 @@ const SetProduct = () => {
   const InputData = (returnedData) => {
     setdimension(returnedData);
   };
-
+// this function return true if the user input an invalid input 
   const CheckError = (state) => {
     return !/^[a-zA-Z0-9 | ]+$/.test(state);
   };
@@ -79,8 +94,10 @@ const SetProduct = () => {
     },
   });
 
-  const classes = useStyles();
 
+
+
+  const classes = useStyles();
   const [SKU, setSKU] = useState("");
   const [Name, setName] = useState("");
   const [Type, setType] = useState("");
@@ -91,9 +108,11 @@ const SetProduct = () => {
   const [NameError, setNameError] = useState(false);
   const [PriceError, setPriceError] = useState(false);
   const [typeError, setTypeError] = useState(false);
-
   const [indicatedOptionType, setindicatedOptionType] = useState(false);
   const [indicatedPriceType, setindicatedPriceType] = useState(false);
+
+
+
 
   const WariningMessage = (text) => {
     let txt = String(text);

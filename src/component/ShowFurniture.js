@@ -15,14 +15,14 @@ const ShowFurniture = ({FurnitureData , Type})=> {
     const [TypeWidth , setTypeWidth] = useState(true)
     const [TypeLenght , setTypeLenght] = useState(true)
 
-
+// in (HandleHeihgt) , (HandleWidth) and (HandleLength) functions all what i need is to make sure that the dimentions is 
+// put in the following format (Lenght x Width x Height)
     const HandleHeihgt = (EnteredData)=> {
         setHeight(EnteredData)
         let dimentions = Lenght + "x" + Width + "x" +EnteredData
         Lenght === '' || Width === '' ? console.log("data not completed yet !") : FurnitureData(dimentions)
         
     }
-
 
     const HandleWidth = (EnteredData)=> {
         setWidth(EnteredData)
@@ -37,6 +37,8 @@ const ShowFurniture = ({FurnitureData , Type})=> {
         Width === '' || Height === '' ? console.log("data not completed yet !") : FurnitureData(dimentions)
     }
 
+
+// here i check if the data intered is valid or not , Label.js sends here  ( True if the user input a valid input and False otherwise)  
     const validateHeightTypes = (type)=> {
         type&&TypeWidth&&TypeLenght ? Type(true) : Type(false)
         setTypeHeight(type)

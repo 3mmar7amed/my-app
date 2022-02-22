@@ -1,4 +1,8 @@
 
+/*
+  this Component is the one which is resposible for rendering everysingle product ,
+  and send the id of the product which its checkbox is checked ...
+*/
 import Card from '@material-ui/core/Card'
 import Checkbox from '@mui/material/Checkbox';
 import Grid from '@material-ui/core/Grid'

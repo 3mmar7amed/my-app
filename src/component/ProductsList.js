@@ -1,8 +1,18 @@
+
+/*
+  in this file we show all products we have ,
+  secondly , we check if the user wants to delete any existing product by checking the check box ,
+              if he wants to delete a product , we have the appropriate id and send it to the the backend 
+              via this endpoint 'https://juniortest-ammar-hamed.herokuapp.com/Delete'
+*/
+
+
+
+
 import SingleProduct from "./SingleProduct"
 import Grid from '@material-ui/core/Grid'
 import {  Container, Typography } from "@material-ui/core";
 import Stack from '@mui/material/Stack';
-
 import '../App.css';
 import Button1 from './Button1'
 
@@ -12,10 +22,14 @@ const ProductsList = ({ Products }) => {
 
   let Products_IDs = new Map();
 
+
+// here we get the IDs from SingleProduct.js file , we put all the IDs in a map so i can add it and simply delete it from the map
+// if the user uncked the product , then when MASS DELETE button is clicked , i put all the IDs in an array called IDsArray 
+// and sent it to the backend ...
+
+
   const getIdToDelete = (id , Delete)=> {
     
-    console.log(Delete)
-
     Delete === true ? Products_IDs.set(parseFloat(id), parseFloat(id) ) : Products_IDs.delete(parseFloat(id))
 
       console.log(Products_IDs)
@@ -47,6 +61,7 @@ const ProductsList = ({ Products }) => {
         IDsArray.push(product.id)
         
       ))
+
       if(IDsArray.length > 0) { 
             const res = await fetch(`https://juniortest-ammar-hamed.herokuapp.com/Delete`, {
               method: 'DELETE',
@@ -59,6 +74,7 @@ const ProductsList = ({ Products }) => {
       }
 
     }
+
   }
 
   return (
